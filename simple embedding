@@ -3,9 +3,9 @@ def emb(user, movie, fact=3):
   user_mat = nn.Embedding(user,fact)
   movie_mat = nn.Embedding(movie,fact)
   return user_mat, movie_mat
-  # initilize  an embedding matrix, this just arbitrary
+  # initilize  an embedding matrix, this is just arbitrary
   emb(10,10)
-# create a very simple dataframe to work with, this just arbitrary
+# create a very simple dataframe to work with, this is just arbitrary
 import pandas as pd
 k = [1,2,3,4]
 b=[4,5,6,7]
