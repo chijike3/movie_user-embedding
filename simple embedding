@@ -1,0 +1,31 @@
+#define an embedding layer
+def emb(user, movie, fact=3):
+  user_mat = nn.Embedding(user,fact)
+  movie_mat = nn.Embedding(movie,fact)
+  return user_mat, movie_mat
+  # initilize  an embedding matrix, this just arbitrary
+  emb(10,10)
+# create a very simple dataframe to work with, this just arbitrary
+import pandas as pd
+k = [1,2,3,4]
+b=[4,5,6,7]
+data = {'users': k, 'movies': b}
+df = pd.DataFrame(data)
+
+  
+  from re import M
+def usemb(x):
+  user_id = x.iloc[:,0]
+  movie_id =x.iloc[:,1]
+  user_id_ten =torch.tensor(user_id)
+  movie_id_ten = torch.tensor(movie_id)
+  for i in user_id_ten:
+    for j in movie_id_ten:
+      print(f'user {i},movie {j}')
+      print(f'embedding weight corresponding to user {i} is {fg[0].weight[i]}')
+      print(f'embedding weight corresponding to movie {j} is {fg[1].weight[j]}')
+      print(f'user prediction of user {i} for movie {j} is {torch.dot(fg[0].weight[i],fg[1].weight[j])}')
+      print()
+    usemb(df)
+      
+  
