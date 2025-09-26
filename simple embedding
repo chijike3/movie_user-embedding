@@ -24,7 +24,7 @@ def usemb(x):
       print(f'user {i},movie {j}')
       print(f'embedding weight corresponding to user {i} is {fg[0].weight[i]}')
       print(f'embedding weight corresponding to movie {j} is {fg[1].weight[j]}')
-      print(f'user prediction of user {i} for movie {j} is {torch.dot(fg[0].weight[i],fg[1].weight[j])}')
+      print(f'user prediction of user {i} for movie {j} is {(fg[0].weight[i]*fg[1].weight[j])}')
       print()
     usemb(df)
       
